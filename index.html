@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+
+<head>
+	<title>Visualisation. A Hyperbolic Image Viewer</title>
+	<meta name="description" content="Visualisation. A Hyperbolic Image Viewer"/>
+</head>
+
+<body>
+		<h1>A Hyperbolic Image Viewer</h1>
+		
+		<p>
+		Tom White, April 1999.
+		</p>
+
+		<h2>Abstract</h2>
+		
+		<p>
+		This page is devoted to a discussion of the benefits hyperbolic displays can
+		bring to visualisation of large datasets. I have provided some Java Applets to
+		demonstrate some of the ideas.
+		</p>
+
+		<h2>Java Applets</h2>
+
+		<p>
+		<a href="escher.html">Escher</a>
+		<br/>
+		<a href="stokie.html">Stoke Newington</a>
+		<br/>
+		<a href="desktop.html">Windows Desktop</a>
+		</p>
+		
+
+		<h2>Hyperbolic Geometry in Computer Displays</h2>
+		
+		<p>
+		Although steadily becoming cheaper screen 'real estate' is still at a premium. Computer
+		applications developers strain to squeeze as much information as possible from each patch
+		of pixels while monitor manufacturers grow their models inexorably - but slowly. Until we
+		have wall-sized display units that allow us to shuffle views as flexibly as we hang
+		pictures now we shall continue to use nifty space-saving measures such as scrolling
+		panels and switchable windows.
+		</p>
+		
+		<p>
+		It may then come as a surprise that - in the world of pure mathematics at least - an
+		<i>infinite amount</i> of space can be contained in a finite area. The trick of course is
+		that the visible size of objects in such a space, called a <i>hyperbolic geometry</i>,
+		decreases to nothing as you get closer to the 'edge'. To illustrate this we can use the
+		Poincare/ Model which is one such hyperbolic geometry. This model represents a
+		point in hyperbolic space by a point on the unit disk - that is, the numbers in the
+		complex plane with magnitude less than 1. Distances in this disk are not measured using
+		the familiar Euclidean metric, but rather one which attributes the distance to the edge of
+		the disk as <i>infinity</i>. This means that the whole Euclidean plane is 'contained' in
+		the unit disk. The only problem is the edge is a little squashed.
+		</p>
+		
+		<p>
+		Nice things about this new view:
+		<ul>
+		<li>
+		There is no artificial cut-off. In the scrollbar model there is a fixed rectangular
+		area which acts as an arbitrarily sized clipping area. And the size of this area is often
+		dictated by external concerns, such as the left over space in a given window. The
+		scrollbars are imposed for practical reasons - not because they are an integral part of
+		the view. The hyperbolic view has no such unnatural constructs.
+		</li>
+		<li>
+		Cut-off is not sharp. You do not know what is just beyond the scrollbar. In a hyperbolic
+		view, you have at least some visual indication - a <i>gestalt</i> - of what is coming up. This
+		hyperbolic method thus lends itself well to applications where there is some form of
+		connectivity between regions of space, such as maps. Applications with unordered, linear,
+		or text only elements don't benefit as well from a hyperbolic projection; list boxes for
+		example.
+		</li>
+		<li>
+		The view can fit in any fixed display space. Infinite Euclidean space - the usual
+		(unstated) display model - can be wrapped in a disk of arbitrary size. Although only the
+		central portion, roughly three-quarters of the display area of the disk, is clearly
+		discernible - in a sense the view takes in the whole object. The display can mask the
+		size of the object (although this can be a disadvantage) which brings a certain elegant
+		simplicity.
+		</li>
+		<li>
+		Natural rotation. In scroll panel implementations there is no obvious mechanism for
+		rotation, and if there is then the height and width of the display object changes which
+		can be disconcerting or annoying. Since the hyperbolic view disguises absolute size and
+		since the display is a circular presentation, rotation is an entirely natural motion.
+		</li>
+		<li>
+		Controls neatly occupy the space around the disk. 
+		</li>
+		</ul>
+		</p>
+
+		<p>
+		But:
+		<ul>
+		<li>
+		There is no indication of how big the display object is. There is no 'width of scrollbar
+		thumb' equivalent measure.
+		</li>
+		</ul>
+		</p>
+	
+		<p>
+		Promising applications include:
+		<ul>
+		<li>
+		Maps, both geographic and topological. With clear directional markings navigation - by
+		dragging and rotation, or programmatically - is very intuitive. Indeed, 'fly by wire'
+		views appear very promising and could find interesting application in car navigation
+		units (where the driver needs a large magnified view of his or her current location and
+		but only an indication of the geography much further ahead).
+		</li>
+		<li>
+		Hierarchies such as trees and graphs. See paper on displaying the WWW in hyperbolic space.
+		</li>
+		<li>
+		Tiling of the plane. Since you can 'scroll forever' a nice application would visualising
+		an infinite tiling such as wallpaper (periodic) or a Penrose tiling (aperiodic).
+		See the <a href="../alhambra/index.html">alhambra project</a> for more on aperiodic tilings.
+		</li>
+		</ul>
+		</p>
+
+		<h2>References</h2>
+
+		<p>
+		<a href="http://www.acm.org/sigchi/chi95/Electronic/documnts/papers/jl_bdy.htm">
+		A Focus+Context Technique Based on Hyperbolic Geometry for
+		Visualizing Large Hierarchies</a> by John Lamping, Ramana Rao, and Peter Pirolli.<br/>
+		<a href="http://www.geom.umn.edu/~munzner/vrml95/webviz/webviz.html">
+		Visualizing the Structure of the World Wide Web in 3D Hyperbolic
+		Space</a> by Tamara Munzner and Paul Burchard.
+		</p>
+
+</body>
+
+</html>
